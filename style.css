@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-background-clr: #f7f7f7;
+    --primary-color: #ffffff;
+    --text-color: #232c47;
+    --main-setting-color: #fafafa;
+    --faint-color:  rgba(0,0,0,0.6);
+}
+
+[data-theme="dark"]{
+    --primary-color: #1f272d;
+    --text-color: #fdfefc;
+    --main-setting-color: #2d333a;
+    --faint-color: rgba(255,255,255,0.6);
+    --body-background-clr: #0f121a;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-background-clr);
+}
+
+ul{
+    list-style: none;
+}
+
+.faint-text{
+    color: var(--faint-color);
+}
+
+.openMenuIcon{
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.container .userBx{
+    width: 300px;   
+    border-radius: 0.6rem;
+    /* overflow: hidden; */
+    transition: 2s;
+}
+
+.subContainer{
+    position: relative;
+    box-shadow: 7px 7px 24px rgba(0,0,0,0.1);
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container .userBx .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+    z-index: 999999;
+}
+
+.container .userBx .header .leftBx{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .userBx .header .leftBx .imgBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.container .userBx .header .leftBx .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .userBx .header .leftBx .contentBx p{
+    margin-bottom: 3px;
+}
+
+.container .userBx .header .leftBx .contentBx h2{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.container .userBx .mainSettingBx{
+    background: var(--main-setting-color);
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+.container .userBx .subSettingBx{
+    padding: 1rem 2.5rem;
+}
+
+.container .userBx ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.container .userBx .subSettingBx li:last-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .userBx ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+
+/* Toggle Switch */
+.themeSwitcherContainer{
+    display: flex;
+    align-items: center;
+}
+
+.themeSwitcherContainer .themeSwitch{
+    display: inline-block;
+    height: 27px;
+    position: relative;
+    width: 54px;
+}
+
+.themeSwitcherContainer .themeSwitch input{
+    display: none;
+}
+
+.slider{
+    background-color: #ccc;
+    cursor: pointer;
+    inset: 0;
+    position: absolute;
+    border-radius: 30px;
+}
+
+.slider::before{
+    content: '';
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .3s;
+
+}
+
+.themeSwitcherContainer .themeSwitch input:checked + .slider{
+    background: cyan;
+}
+
+.themeSwitcherContainer .themeSwitch input:checked + .slider::before{
+    transform: translateX(26px);
+}

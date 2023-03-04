@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="userBx">
+        <div class="header">
+          <div class="leftBx">
+            <div class="imgBx">
+              <img src="./user-light.PNG" alt="" />
+            </div>
+            <div class="contentBx">
+              <p class="faint-text">Welcome,</p>
+              <h2>Jennifer</h2>
+            </div>
+          </div>
+
+          <div class="rightBx">
+            <i class="fa-solid fa-chevron-down openMenuIcon"></i>
+          </div>
+        </div>
+        <div class="subContainer">
+          <div class="mainSettingBx">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-sharp fa-solid fa-gear"></i>
+                  <span>My Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-bell"></i>
+                  <span>Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-camera"></i>
+                  <span>Video Tutorials</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="subSettingBx">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-earth-asia"></i>
+                  <span>Knowledge base</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-server"></i>
+                  <span>Find Servers</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-keyboard"></i>
+                  <span>Keyboard shortcuts</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-moon"></i>
+                  <span>Dark mode</span>
+                </a>
+                <!-- Toggle checkbox here -->
+                <div class="themeSwitcherContainer">
+                  <label for="checkbox" class="themeSwitch">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider"></div>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
